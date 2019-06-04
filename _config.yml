@@ -2,56 +2,44 @@
 #
 
 # Site settings
-title: Welcome
+title: 参照物
 description: |
   简单博客
-owner: Mr.Zhang
+owner: zhangwentao
 first_published: 2019 # if migrating another site, the year of your first publish
 email: go.secret@163.com
 baseurl: ""
+port: 4001
 url: "http://reference.fun"
 social:
-  #twitter: https://twitter.com/<username>
   github: https://github.com/daai
-  #linkedin-square: https://linkedin.com/in/<username>
-  #facebook-official: https://facebook.com/<username>
-  #google-plus-square: https://plus.google.com/u/0/+<username>
-  #email: /contact/
-  #flickr:
-  #instagram:
-  #youtube-square:
-  #spotify:
-  #stack-overflow:
-  #vimeo:
-  #reddit:
-  #stubleupon:
-  #delicious:
-  #pied-piper:
-  #digg:
-  #soundcloud:
-  #deviantart:
-  #angellist:
-  #tumblr-square:
-  #stackexchange:
-  #weibo:
-  #trello:
-  #foursquare:
-  #linux:
-  #bitbucket-square:
-  #vk:
-  #slack:
-  #vine:
-  #weixin:
-  #yelp:
-  #skyatlas:
-  #leanpub:
-  #connectdevelop:
-  #ils:
-  #forumbee:
-  #tripadvisor:
-  #amazon:
-
 # Build settings
 markdown: kramdown
 #sass:
 #  style: compressed
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "page"
+      author: "Mr. zhang"
+paginate: 5
+paginate_path: "blog/page:num"
+
+plugins:
+  - jekyll-paginate
+
+links1:
+  - name:         博客列表
+    url:          /blog
+    type:         blogs
+    external:     false
+  - name:         关于
+    url:          /about
+    type:         about
+    external:     false
+
+blog_1:    blogs
+blog_2:    about
